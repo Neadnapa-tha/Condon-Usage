@@ -48,10 +48,8 @@
 - **Encoding**: แปลง `Kingdom` ให้เป็น numerical เพื่อใช้ในการพยากรณ์
 - **Feature Selection**: ใช้ ANOVA ในการเลือกคุณลักษณะสำคัญที่ส่งผลต่อการพยากรณ์
 - **Feature Engineering**:
-    - Feature scaling
     - Feature encoding
     - การเปรียบเทียบระหว่าง all features และ selected features
-
 ---
 
 ## 🤖 Model Selection
@@ -59,24 +57,12 @@
 ทำการเปรียบเทียบโมเดลและปรับแต่งพารามิเตอร์โดยใช้ Validation set เพื่อหลีกเลี่ยง Overfitting/Underfitting
 
 ### โมเดลที่ใช้:
-- **Logistic Regression** + Polynomial Features
-- **Random Forest**
-- **Decision Tree**
+- **Logistic Regression** + Polynomial Features วนลูปหาค่า degree ที่จะให้ผล accuracy ที่มากที่สุด
+- **Random Forest** วนลูปหาค่า n_estimators ที่ดีที่สุด
+- **Decision Tree** วนลูปหาค่า max_depth ที่ดีที่สุด
 
 ### การประเมิน:
-- **Regression**: MSE, RMSE, MAE, MAPE
 - **Classification**: Accuracy, Precision, Recall, F1-score
-
-### ผลลัพธ์จาก Learning Curve:
-- **All Features**:
-    - Logistic Regression: ไม่มี overfitting/underfitting
-    - Random Forest: มีลักษณะ underfitting ในช่วงแรก แต่ปรับตัวดี
-    - Decision Tree: เริ่มต้นมี underfitting แล้วปรับเข้าสู่เสถียร
-- **Selected Features**:
-    - Logistic Regression: Learning curve ขนานดี แต่ accuracy ยังต่ำ
-    - Random Forest: valid accuracy ต่ำและคงที่
-    - Decision Tree: เกิด overfitting
-
 ---
 
 ## 🧪 Evaluation on Test Set
