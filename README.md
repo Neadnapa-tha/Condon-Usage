@@ -65,6 +65,3 @@
 - **Classification**: Accuracy, Precision, Recall, F1-score
 ---
 
-## 🧪 Evaluation on Test Set
-
-เมื่อนำโมเดลที่ดีที่สุด (**Logistic Regression + Polynomial Features (degree = 3)**) มาทดสอบกับ Test Set พบว่าได้ **Accuracy = 0.93** ซึ่งถือว่ามีประสิทธิภาพดีมาก
